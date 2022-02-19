@@ -2,7 +2,7 @@
 
 def cria_escada(numero):
     """Recebe um inteiro e monta uma escada com a mesma proporção para base e altura,
-    com espaços no lado direito"""
+    com espaços no lado esquerdo"""
 
     for i in range(0, numero):
         for j in range(0, numero):
