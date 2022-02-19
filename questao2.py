@@ -25,7 +25,7 @@ def valida_senha(string):
             minusculo += 1
             break
 
-    simbolos = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+']
+    simbolos = '!@#$%^&*()-+'
     for caractere in string:
         if caractere in simbolos:
             especial += 1
