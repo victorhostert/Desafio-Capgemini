@@ -1,4 +1,18 @@
-"""Resposta da segunda questão do Desafio"""
+"""
+# Questão 02
+
+Débora se inscreveu em uma rede social para se manter em contato com seus amigos.
+A página de cadastro exigia o preenchimento dos campos de nome e senha, porém a senha precisa ser forte. 
+O site considera uma senha forte quando ela satisfaz os seguintes critérios:
+●	Possui no mínimo 6 caracteres.
+●	Contém no mínimo 1 digito.
+●	Contém no mínimo 1 letra em minúsculo.
+●	Contém no mínimo 1 letra em maiúsculo.
+●	Contém no mínimo 1 caractere especial. Os caracteres especiais são: !@#$%^&*()-+
+Débora digitou uma string aleatória no campo de senha, porém ela não tem certeza se é uma senha forte.
+Para ajudar Débora, construa um algoritmo que informe qual é o número mínimo de caracteres que devem ser adicionados
+para uma string qualquer ser considerada segura.
+"""
 
 def valida_senha(string):
     """Valida a senha garantindo que cumpra os requisitos"""
@@ -8,12 +22,10 @@ def valida_senha(string):
     minusculo = 0
     especial = 0
 
-
     for i in range(0, len(string)):
         if string[i].isnumeric():
             numero += 1
             break
-
 
     for i in range(0, len(string)):
         if string[i].isupper():
@@ -54,18 +66,15 @@ def valida_senha(string):
             print()
         else:
             return True
-    return False
 
 if __name__ == '__main__':
-    print("Uma senha segura deve conter 6 caracteres, sendo estes 1 número, 1 letra maíuscula, 1 letra minúscula, e 1 símbolo")
+    print("\nUma senha segura deve conter 6 caracteres, sendo estes 1 número, 1 letra maíuscula, 1 letra minúscula, e 1 símbolo")
     senha = input("\nDigite sua senha segura: ")
 
 
     while True:
         if valida_senha(senha):
+            print("Sua senha é forte!\n")
             break
         else:
             senha = input("\nDigite uma nova senha: ")
-
-    print("OK! Tudo certo para gerar uma senha forte!\n")
-    print(f"Sua senha: {senha}\n")
